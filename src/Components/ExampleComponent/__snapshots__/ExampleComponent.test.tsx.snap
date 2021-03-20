@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without crashing 1`] = `
+<Fragment>
+  <styled.h1
+    backgroundColor="red"
+  >
+    Test
+  </styled.h1>
+</Fragment>
+`;

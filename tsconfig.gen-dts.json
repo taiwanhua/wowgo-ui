@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist/js",
+        "jsx": "react",
+        "lib": [
+            "ES2020",
+            "ES2019",
+            "ES2018",
+            "ES2017",
+            "ES2016",
+            "ES2015",
+            "dom"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "target": "es5",
+        "noImplicitAny": false
+    },
+    "include": [
+        "./src/*",
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./src/**/**.test.tsx",
+        "./src/**/**.test.ts",
+        "./src/**/**.stories.ts",
+        "./src/**/**.stories.tsx",
+        "./src/**/examples/**"
+    ]
+}

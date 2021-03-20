@@ -1,0 +1,8 @@
+# ignore src
+
+src/
+# src/**/*
+
+scripts/
+
+.storybook/
