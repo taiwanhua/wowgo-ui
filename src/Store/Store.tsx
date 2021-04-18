@@ -1,5 +1,5 @@
-// import { gcs, WowgoProvider, createWowgoStore, useWowgoSelector, useWowgoDispatch, combineReducers } from 'wowgo-state-react';
-import { gcs, WowgoProvider, createWowgoStore, useWowgoSelector, useWowgoDispatch, combineReducers } from 'wowgo-state-react';
+import * as React from 'react';
+import { /* gcs, */ WowgoProvider, createWowgoStore, /*useWowgoSelector, useWowgoDispatch,*/ combineReducers } from 'wowgo-state-react';
 import { wowgoUI, test } from './Reducers'
 
 const combinedReducer = combineReducers({

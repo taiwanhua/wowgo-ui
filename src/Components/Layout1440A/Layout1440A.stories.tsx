@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { Divider, IDividerProps } from "./Divider";
+import { Layout1440A, ILayout1440AProps } from "./Layout1440A";
 import { mergeDeep } from 'immutable'
 import { WowgoUIProvider } from "../Context/Context";
 
 export default {
-    title: 'Layout/Divider',
-    component: Divider,
+    title: 'Layout/Layout1440A',
+    component: Layout1440A,
     description: "sdf",
     argTypes: {
         theme: {
@@ -104,31 +104,31 @@ export default {
 } as Meta;
 
 
-const Template: Story<IDividerProps> = (args) => (<WowgoUIProvider><Divider  {...args} /></WowgoUIProvider>);
+const Template: Story<ILayout1440AProps> = (args) => (<WowgoUIProvider><Layout1440A  {...args} /></WowgoUIProvider>);
 
-export const DividerOnly = Template.bind({});
+export const Layout1440AOnly = Template.bind({});
 
-DividerOnly.args = {
-    children: "Divider 組件",
+Layout1440AOnly.args = {
+    children: "Layout1440A 組件",
 };
 
-DividerOnly.parameters = {
+Layout1440AOnly.parameters = {
     docs: {
         source: {
             language: "jsx",
             code: `
-<Divider>
-    Divider 組件
-</Divider>
+<Layout1440A>
+    Layout1440A 組件
+</Layout1440A>
 `,
         },
     },
 };
 
-export const DividerCustomColor = Template.bind({});
+export const Layout1440ACustomColor = Template.bind({});
 
-DividerCustomColor.args = {
-    children: "Divider 組件，orientation=center type=horizontal",
+Layout1440ACustomColor.args = {
+    children: "Layout1440A 組件，orientation=center type=horizontal",
     orientation: "center",
     type: "horizontal",
     theme: (style, uiStore, porpsFromDom, utils) => {
@@ -152,12 +152,12 @@ DividerCustomColor.args = {
     }
 };
 
-DividerCustomColor.parameters = {
+Layout1440ACustomColor.parameters = {
     docs: {
         source: {
             language: "jsx",
             code: `
-<Divider
+<Layout1440A
     orientation={"center"}
     type={"horizontal"}
     theme: (style, uiStore, porpsFromDom, utils) => {
@@ -179,8 +179,8 @@ DividerCustomColor.parameters = {
         })
     }
 >
-    Divider 組件
-</Divider>
+    Layout1440A 組件
+</Layout1440A>
 `,
         },
     },

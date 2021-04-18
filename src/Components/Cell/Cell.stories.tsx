@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Cell, ICellProps } from "./Cell";
-import { WowgoUiProvider } from "../../Store/Store";
+import { WowgoUIProvider } from "../Context/Context";
 
 export default {
     title: 'Container/Cell',
@@ -49,7 +49,7 @@ export default {
 } as Meta;
 
 
-const Template: Story<ICellProps> = (args) => (<WowgoUiProvider><Cell  {...args} /></WowgoUiProvider>);
+const Template: Story<ICellProps> = (args) => (<WowgoUIProvider><Cell  {...args} /></WowgoUIProvider>);
 
 export const CellWithBorder = Template.bind({});
 CellWithBorder.args = {

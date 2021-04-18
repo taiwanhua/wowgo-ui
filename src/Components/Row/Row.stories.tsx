@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Row, IRowProps } from "./Row";
-import { WowgoUiProvider } from "../../Store/Store";
+import { WowgoUIProvider } from "../Context/Context";
 
 export default {
     title: 'Container/Row',
@@ -49,7 +49,7 @@ export default {
 } as Meta;
 
 
-const Template: Story<IRowProps> = (args) => (<WowgoUiProvider><Row  {...args} /></WowgoUiProvider>);
+const Template: Story<IRowProps> = (args) => (<WowgoUIProvider><Row  {...args} /></WowgoUIProvider>);
 
 export const RowWithBorder = Template.bind({});
 RowWithBorder.args = {

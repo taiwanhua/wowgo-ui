@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Box, IBoxProps } from "./Box";
-import { WowgoUiProvider } from "../../Store/Store";
+import { WowgoUIProvider } from "../Context/Context";
 
 export default {
     title: 'Container/Box',
@@ -49,7 +49,7 @@ export default {
 } as Meta;
 
 
-const Template: Story<IBoxProps> = (args) => (<WowgoUiProvider><Box  {...args} /></WowgoUiProvider>);
+const Template: Story<IBoxProps> = (args) => (<WowgoUIProvider><Box  {...args} /></WowgoUIProvider>);
 
 export const BoxWithBorder = Template.bind({});
 BoxWithBorder.args = {

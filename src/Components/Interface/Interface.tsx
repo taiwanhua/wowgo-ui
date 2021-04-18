@@ -1,11 +1,12 @@
 import { IcssTaggedTemplateObject, IcssTaggedTemplateObjectWithDomKey } from "wowgo-utils";
+import { IinitialUiStore } from "../Context/Context";
 
 /**
  * 作為 :
  * - Base 組件的 props 介面，供繼承後使用
  */
 export interface IBaseComponentProps {
-    theme?: (style: IcssTaggedTemplateObject, uiStore: any, porpsFromDom: any, utils: any) => IcssTaggedTemplateObject;
+    theme?: (style: IcssTaggedTemplateObject, uiStore: IinitialUiStore, porpsFromDom: any, utils: any) => IcssTaggedTemplateObject;
     // disabled?: boolean;
     className?: string;
     children?: React.ReactNode;
@@ -19,7 +20,7 @@ export interface IBaseComponentProps {
  * - Composite(合成) 組件的 props 介面，供繼承後使用
  */
 export interface ICompositeComponentProps<S extends IcssTaggedTemplateObjectWithDomKey> {
-    theme?: (style: S, uiStore: any, porpsFromDom: any, utils: any) => S;
+    theme?: (style: S, uiStore: IinitialUiStore, porpsFromDom: any, utils: any) => S;
     // disabled?: boolean;
     className?: string;
     children?: React.ReactNode;

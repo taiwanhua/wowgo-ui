@@ -8,29 +8,29 @@ import { theme } from './Theme';
 import { ConfigConsumer, IConfigContextProps, IinitialUiStore, IWowgoUIContext, WowgoUIContext } from '../Context/Context';
 
 /**
- * Divider 組件的 props 介面，已繼承介面 ICompositeComponentProps<IDividerThemeWithKey>
+ * Layout1440A 組件的 props 介面，已繼承介面 ICompositeComponentProps<ILayout1440AThemeWithKey>
  */
-export interface IDividerProps extends ICompositeComponentProps<IDividerThemeWithKey> {
+export interface ILayout1440AProps extends ICompositeComponentProps<ILayout1440AThemeWithKey> {
     type?: 'horizontal' | 'vertical';
     orientation?: 'left' | 'right' | 'center';
     dashed?: boolean;
 }
 
 /**
- * Divider 組件內 具有 DomKey 的 IcssTaggedTemplateObject 介面物件
+ * Layout1440A 組件內 具有 DomKey 的 IcssTaggedTemplateObject 介面物件
  */
-export interface IDividerThemeWithKey {
+export interface ILayout1440AThemeWithKey {
     dividerBox?: IcssTaggedTemplateObject;
     dividerSpan?: IcssTaggedTemplateObject;
     [key: string]: IcssTaggedTemplateObject | undefined;
 }
 
 /**
- * Divider 為可夾帶說明文字的分隔線組件
- * @param props 使用介面 IDividerProps
+ * Layout1440A 為可夾帶說明文字的分隔線組件
+ * @param props 使用介面 ILayout1440AProps
  * @returns 一個可夾帶說明文字的分隔線組件
  */
-export const Divider: React.FC<IDividerProps> = (props) => {
+export const Layout1440A: React.FC<ILayout1440AProps> = (props) => {
 
     const { uiStore: uistore } = React.useContext<IWowgoUIContext>(WowgoUIContext)
 
@@ -66,12 +66,12 @@ export const Divider: React.FC<IDividerProps> = (props) => {
                     <Box
                         {...restProps}
                         className={`${props.className} ${classString} wowgo-divider-box`}
-                        theme={themeMakerWithDomKey<IDividerThemeWithKey, IcssTaggedTemplateObject, IinitialUiStore>(props, props.theme, theme({ ...props, hasChildren, uiStore: uistore }), uistore, "dividerBox")}
+                        theme={themeMakerWithDomKey<ILayout1440AThemeWithKey, IcssTaggedTemplateObject, IinitialUiStore>(props, props.theme, theme({ ...props, hasChildren, uiStore: uistore }), uistore, "dividerBox")}
                     >
                         {props.children &&
                             <Span
                                 className={`${props.className} ${prefixCls}-inner-text wowgo-dividerSpan`}
-                                theme={themeMakerWithDomKey<IDividerThemeWithKey, IcssTaggedTemplateObject, IinitialUiStore>(props, props.theme, theme({ ...props, hasChildren, uiStore: uistore }), uistore, "dividerSpan")}
+                                theme={themeMakerWithDomKey<ILayout1440AThemeWithKey, IcssTaggedTemplateObject, IinitialUiStore>(props, props.theme, theme({ ...props, hasChildren, uiStore: uistore }), uistore, "dividerSpan")}
                             >
                                 {props.children}
                             </Span>

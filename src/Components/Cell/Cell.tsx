@@ -1,6 +1,7 @@
+import * as React from "react";
 import styled from "styled-components";
-import { useWowgoSelector } from "wowgo-state-react";
 import { themeMaker } from "wowgo-utils";
+import { IWowgoUIContext, WowgoUIContext } from "../Context/Context";
 import { IBaseComponentProps } from "../Interface/Interface";
 import { theme } from './Theme'
 
@@ -30,7 +31,7 @@ export const CellWappered = styled.div.attrs<ICellProps>((props) => ({
  */
 export const Cell: React.FC<ICellProps> = (props) => {
 
-    const uistore = useWowgoSelector<any, any>((state) => state.wowgoUI)
+    const { uiStore: uistore } = React.useContext<IWowgoUIContext>(WowgoUIContext)
 
     return (
         <CellWappered {...{ ...props, uiStore: uistore }} />

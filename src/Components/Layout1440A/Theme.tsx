@@ -1,6 +1,6 @@
-import { IDividerProps, IDividerThemeWithKey } from "./Divider";
+import { ILayout1440AProps, ILayout1440AThemeWithKey } from "./Layout1440A";
 
-export const theme = (props: IDividerProps): IDividerThemeWithKey => {
+export const theme = (props: ILayout1440AProps): ILayout1440AThemeWithKey => {
 
     return {
         dividerBox: {

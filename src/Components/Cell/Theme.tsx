@@ -5,7 +5,7 @@ export const theme: IcssTaggedTemplateObject = {
     base: {
         css: {
             //#region Flex設置
-            flexGrow: "0",
+            flexGrow: 0,
             maxWidth: "none",
             flexBasis: "auto",
             boxSizing: "border-box",
