@@ -19,11 +19,15 @@ export const defaultGetPrefixCls = (suffixCls?: string, customizePrefixCls?: str
 };
 
 export interface IConfigContextProps {
+    /** CSS class 前後綴組合 */
     defaultGetPrefixCls: (suffixCls?: string, customizePrefixCls?: string, combineCustomizePrefix?: boolean) => string;
-    /* CSS 屬性參數化 */
-    configConsumerTheme: IConfigConsumerTheme
+    /** CSS 屬性參數化 */
+    configConsumerTheme: IConfigConsumerTheme,
+    direction?: DirectionType;
     // ...
 }
+
+export type DirectionType = 'ltr' | 'rtl' | undefined;
 
 export interface IConfigConsumerTheme {
     [key: string]: string | number | boolean | undefined | IConfigConsumerTheme | (string | number | boolean | undefined | IConfigConsumerTheme)[];
@@ -38,7 +42,7 @@ export const configConsumerTheme: IConfigConsumerTheme = {
 export const ConfigContext = React.createContext<IConfigContextProps>({
     // 透過 Context 提供一些預設函數或值 ( without provider )
     defaultGetPrefixCls: defaultGetPrefixCls,
-    configConsumerTheme
+    configConsumerTheme,
     // ...
 });
 

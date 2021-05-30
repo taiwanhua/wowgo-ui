@@ -5,7 +5,11 @@ export * from './Cell/Cell';
 export * from './Palettes/Palettes'
 export * from './Interface/Interface'
 export * from './Span/Span';
+export * from './Footer/Footer';
+export * from './Header/Header';
+export * from './Main/Main';
+export * from './Section/Section';
 export * from './Divider/Divider'
 export * from './Context/Context'
 export * from './Helper/Helper'
-
+export * from './ScrollBar/ScrollBar'
